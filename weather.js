@@ -1,11 +1,11 @@
 const express = require("express");
 const https = require("https");
-const { url } = require("inspector");
+// const { url } = require("inspector");
 const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/");
+  // res.sendFile(__dirname + "/");
 
   const url =
     "https://api.openweathermap.org/data/2.5/weather?lat=37.1674&lon=-3.6117&units=metric&appid=a65c6effc790af3045e015b20026024e";
@@ -30,8 +30,15 @@ app.get("/", (req, res) => {
         name,
         cod,
       } = { ...weatherData };
-      console.log(coords);
 
+      res.write(`<p>The weather is currently  ${description}</p>`);
+      res.write(`<h1>The temperature in ${name}, is ${temp}.</h1>`);
+      res.write(
+        `<img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png"></img>`
+      );
+      res.send();
+
+      console.log(coords);
       console.log(temp);
       console.log(description);
     });
