@@ -1,0 +1,22 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "Weather API consuming with node",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseAlbDR/nodeWeatherAPI.git"
+  },
+  "author": "J.Alberto Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseAlbDR/nodeWeatherAPI/issues"
+  },
+  "homepage": "https://github.com/JoseAlbDR/nodeWeatherAPI#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
